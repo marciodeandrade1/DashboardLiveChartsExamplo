@@ -28,19 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
+            labelKpil = new Label();
+            labelKpi1Desc = new Label();
+            labelKpi2Desc = new Label();
+            labelKpi2 = new Label();
+            labelKpi3Desc = new Label();
+            labelKpi3 = new Label();
+            labelKpi4Desc = new Label();
+            labelKpi4 = new Label();
             SuspendLayout();
+            // 
+            // labelKpil
+            // 
+            labelKpil.AutoSize = true;
+            labelKpil.Location = new Point(46, 48);
+            labelKpil.Name = "labelKpil";
+            labelKpil.Size = new Size(44, 15);
+            labelKpil.TabIndex = 0;
+            labelKpil.Text = "R$ 0,00";
+            // 
+            // labelKpi1Desc
+            // 
+            labelKpi1Desc.AutoSize = true;
+            labelKpi1Desc.Location = new Point(46, 21);
+            labelKpi1Desc.Name = "labelKpi1Desc";
+            labelKpi1Desc.Size = new Size(106, 15);
+            labelKpi1Desc.TabIndex = 1;
+            labelKpi1Desc.Text = "Receita Total (Mês)";
+            // 
+            // labelKpi2Desc
+            // 
+            labelKpi2Desc.AutoSize = true;
+            labelKpi2Desc.Location = new Point(191, 21);
+            labelKpi2Desc.Name = "labelKpi2Desc";
+            labelKpi2Desc.Size = new Size(88, 15);
+            labelKpi2Desc.TabIndex = 2;
+            labelKpi2Desc.Text = "Total de Vendas";
+            // 
+            // labelKpi2
+            // 
+            labelKpi2.AutoSize = true;
+            labelKpi2.Location = new Point(191, 48);
+            labelKpi2.Name = "labelKpi2";
+            labelKpi2.Size = new Size(13, 15);
+            labelKpi2.TabIndex = 2;
+            labelKpi2.Text = "0";
+            // 
+            // labelKpi3Desc
+            // 
+            labelKpi3Desc.AutoSize = true;
+            labelKpi3Desc.Location = new Point(306, 21);
+            labelKpi3Desc.Name = "labelKpi3Desc";
+            labelKpi3Desc.Size = new Size(75, 15);
+            labelKpi3Desc.TabIndex = 2;
+            labelKpi3Desc.Text = "Ticket Médio";
+            // 
+            // labelKpi3
+            // 
+            labelKpi3.AutoSize = true;
+            labelKpi3.Location = new Point(306, 48);
+            labelKpi3.Name = "labelKpi3";
+            labelKpi3.Size = new Size(44, 15);
+            labelKpi3.TabIndex = 2;
+            labelKpi3.Text = "R$ 0,00";
+            // 
+            // labelKpi4Desc
+            // 
+            labelKpi4Desc.AutoSize = true;
+            labelKpi4Desc.Location = new Point(411, 21);
+            labelKpi4Desc.Name = "labelKpi4Desc";
+            labelKpi4Desc.Size = new Size(108, 15);
+            labelKpi4Desc.TabIndex = 2;
+            labelKpi4Desc.Text = "Crescimento Anual";
+            // 
+            // labelKpi4
+            // 
+            labelKpi4.AutoSize = true;
+            labelKpi4.Location = new Point(411, 48);
+            labelKpi4.Name = "labelKpi4";
+            labelKpi4.Size = new Size(32, 15);
+            labelKpi4.TabIndex = 2;
+            labelKpi4.Text = "0.0%";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(860, 462);
+            Controls.Add(labelKpi2);
+            Controls.Add(labelKpi3);
+            Controls.Add(labelKpi4);
+            Controls.Add(labelKpi4Desc);
+            Controls.Add(labelKpi3Desc);
+            Controls.Add(labelKpi2Desc);
+            Controls.Add(labelKpi1Desc);
+            Controls.Add(labelKpil);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashboard 1.0";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label labelKpil;
+        private Label labelKpi1Desc;
+        private Label labelKpi2Desc;
+        private Label labelKpi2;
+        private Label labelKpi3Desc;
+        private Label labelKpi3;
+        private Label labelKpi4Desc;
+        private Label labelKpi4;
     }
 }
