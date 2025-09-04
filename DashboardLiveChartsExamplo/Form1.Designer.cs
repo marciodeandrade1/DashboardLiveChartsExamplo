@@ -36,6 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(860, 462);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashboard 1.0";
             ResumeLayout(false);
         }
