@@ -36,6 +36,7 @@
             labelKpi3 = new Label();
             labelKpi4Desc = new Label();
             labelKpi4 = new Label();
+            cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             SuspendLayout();
             // 
             // labelKpi1
@@ -110,11 +111,20 @@
             labelKpi4.TabIndex = 2;
             labelKpi4.Text = "0.0%";
             // 
+            // cartesianChart1
+            // 
+            cartesianChart1.Location = new Point(50, 99);
+            cartesianChart1.Name = "cartesianChart1";
+            cartesianChart1.Size = new Size(469, 335);
+            cartesianChart1.TabIndex = 3;
+            cartesianChart1.Text = "cartesianChart1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(860, 462);
+            Controls.Add(cartesianChart1);
             Controls.Add(labelKpi2);
             Controls.Add(labelKpi3);
             Controls.Add(labelKpi4);
@@ -140,5 +150,6 @@
         private Label labelKpi3;
         private Label labelKpi4Desc;
         private Label labelKpi4;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
     }
 }
