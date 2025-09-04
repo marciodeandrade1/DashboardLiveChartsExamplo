@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelKpil = new Label();
             labelKpi1 = new Label();
+            labelKpi1Desc = new Label();
             labelKpi2Desc = new Label();
             labelKpi2 = new Label();
             labelKpi3Desc = new Label();
@@ -38,23 +38,23 @@
             labelKpi4 = new Label();
             SuspendLayout();
             // 
-            // labelKpil
-            // 
-            labelKpil.AutoSize = true;
-            labelKpil.Location = new Point(46, 48);
-            labelKpil.Name = "labelKpil";
-            labelKpil.Size = new Size(44, 15);
-            labelKpil.TabIndex = 0;
-            labelKpil.Text = "R$ 0,00";
-            // 
             // labelKpi1
             // 
             labelKpi1.AutoSize = true;
-            labelKpi1.Location = new Point(46, 21);
+            labelKpi1.Location = new Point(46, 48);
             labelKpi1.Name = "labelKpi1";
-            labelKpi1.Size = new Size(106, 15);
-            labelKpi1.TabIndex = 1;
-            labelKpi1.Text = "Receita Total (Mês)";
+            labelKpi1.Size = new Size(44, 15);
+            labelKpi1.TabIndex = 0;
+            labelKpi1.Text = "R$ 0,00";
+            // 
+            // labelKpi1Desc
+            // 
+            labelKpi1Desc.AutoSize = true;
+            labelKpi1Desc.Location = new Point(46, 21);
+            labelKpi1Desc.Name = "labelKpi1Desc";
+            labelKpi1Desc.Size = new Size(106, 15);
+            labelKpi1Desc.TabIndex = 1;
+            labelKpi1Desc.Text = "Receita Total (Mês)";
             // 
             // labelKpi2Desc
             // 
@@ -121,8 +121,8 @@
             Controls.Add(labelKpi4Desc);
             Controls.Add(labelKpi3Desc);
             Controls.Add(labelKpi2Desc);
+            Controls.Add(labelKpi1Desc);
             Controls.Add(labelKpi1);
-            Controls.Add(labelKpil);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashboard 1.0";
@@ -132,8 +132,8 @@
 
         #endregion
 
-        private Label labelKpil;
         private Label labelKpi1;
+        private Label labelKpi1Desc;
         private Label labelKpi2Desc;
         private Label labelKpi2;
         private Label labelKpi3Desc;

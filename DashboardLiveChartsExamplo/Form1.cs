@@ -10,10 +10,10 @@ namespace DashboardLiveChartsExamplo
             SetupKPIs();
 
             // 2. Configurar o Gráfico de Linha (Vendas ao Longo do Tempo)
-            SetupLineChart();
+            //SetupLineChart();
 
             // 3. Configurar o Gráfico de Pizza/Rosca (Participação de Market Share)
-            SetupPieChart();
+           // SetupPieChart();
         }
 
         private void SetupKPIs()
@@ -23,7 +23,7 @@ namespace DashboardLiveChartsExamplo
             // Na prática, você buscaria esses valores de um banco de dados ou serviço.
 
             labelKpi1.Text = "R$ 152.304,00";
-            labelKpi1.Text = "Receita Total (Mês)";
+            labelKpi1Desc.Text = "Receita Total (Mês)";
 
             labelKpi2.Text = "1.284";
             labelKpi2Desc.Text = "Total de Vendas";
