@@ -1,5 +1,3 @@
-
-
 using LiveCharts;
 using LiveCharts.Defaults;
 using LiveCharts.Wpf;
@@ -20,7 +18,6 @@ namespace DashboardLiveChartsExamplo
             // 3. Configurar o Gráfico de Pizza/Rosca (Participação de Market Share)
             SetupPieChart();
         }
-
         private void SetupPieChart()
         {
             // Cria os dados para o gráfico de pizza.
@@ -65,8 +62,6 @@ namespace DashboardLiveChartsExamplo
             // Opcional: Configura a legenda
             pieChart1.LegendLocation = LegendLocation.Bottom;
         }
-        
-
         private void SetupLineChart()
         {
             // Cria uma nova série do tipo Line (Linha)
@@ -84,29 +79,23 @@ namespace DashboardLiveChartsExamplo
                 PointGeometrySize = 10,
                 PointForeground = System.Windows.Media.Brushes.White
             };
-
             // Adiciona a série ao gráfico
             cartesianChart1.Series = new SeriesCollection { lineSeries };
-
             // Define os rótulos (labels) para o eixo X (Meses)
             cartesianChart1.AxisX.Add(new Axis
             {
                 Title = "Mês",
                 Labels = new[] { "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez" }
             });
-
             // Define o eixo Y
             cartesianChart1.AxisY.Add(new Axis
             {
                 Title = "Vendas (R$)",
                 LabelFormatter = value => value.ToString("C0") // Formata como moeda
             });
-
             // Adiciona uma legenda
             cartesianChart1.LegendLocation = LegendLocation.Top;
         }
-        
-
         private void SetupKPIs()
         {
             // Vamos apenas definir textos e valores fictícios nos Labels que colocamos no design.
