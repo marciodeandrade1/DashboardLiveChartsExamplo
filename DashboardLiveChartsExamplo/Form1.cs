@@ -1,6 +1,7 @@
 
 
 using LiveCharts;
+using LiveCharts.Defaults;
 using LiveCharts.Wpf;
 
 namespace DashboardLiveChartsExamplo
@@ -17,8 +18,54 @@ namespace DashboardLiveChartsExamplo
             SetupLineChart();
 
             // 3. Configurar o Gráfico de Pizza/Rosca (Participação de Market Share)
-           // SetupPieChart();
+            SetupPieChart();
         }
+
+        private void SetupPieChart()
+        {
+            // Cria os dados para o gráfico de pizza.
+            // ObservableValue é uma classe do LiveCharts que notifica o gráfico sobre mudanças.
+            var pieSeriesCollection = new SeriesCollection();
+
+            pieSeriesCollection.Add(new PieSeries
+            {
+                Title = "Empresa A",
+                Values = new ChartValues<ObservableValue> { new ObservableValue(40) },
+                DataLabels = true, // Mostra os rótulos de dados
+                LabelPoint = chartPoint => $"{chartPoint.Y}%" // Formata o label para mostrar a porcentagem
+            });
+            pieSeriesCollection.Add(new PieSeries
+            {
+                Title = "Empresa B",
+                Values = new ChartValues<ObservableValue> { new ObservableValue(25) },
+                DataLabels = true,
+                LabelPoint = chartPoint => $"{chartPoint.Y}%"
+            });
+            pieSeriesCollection.Add(new PieSeries
+            {
+                Title = "Nossa Empresa",
+                Values = new ChartValues<ObservableValue> { new ObservableValue(20) },
+                DataLabels = true,
+                LabelPoint = chartPoint => $"{chartPoint.Y}%"
+            });
+            pieSeriesCollection.Add(new PieSeries
+            {
+                Title = "Empresa C",
+                Values = new ChartValues<ObservableValue> { new ObservableValue(15) },
+                DataLabels = true,
+                LabelPoint = chartPoint => $"{chartPoint.Y}%"
+            });
+
+            // Atribui a coleção de séries ao PieChart
+            pieChart1.Series = pieSeriesCollection;
+
+            // Opcional: Força o gráfico a ser desenhado como uma rosca (Donut)
+            pieChart1.InnerRadius = 50; // 50 pixels de raio interno (buraco)
+
+            // Opcional: Configura a legenda
+            pieChart1.LegendLocation = LegendLocation.Bottom;
+        }
+        
 
         private void SetupLineChart()
         {
@@ -58,7 +105,7 @@ namespace DashboardLiveChartsExamplo
             // Adiciona uma legenda
             cartesianChart1.LegendLocation = LegendLocation.Top;
         }
-        }
+        
 
         private void SetupKPIs()
         {
