@@ -2,28 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using DashboardLiveChartsExamplo.Models;
 
 namespace DashboardLiveChartsExample
 {
-    public class VendaMensal
-    {
-        public string Mes { get; set; }
-        public decimal Valor { get; set; }
-    }
-
-    public class ParticipacaoMercado
-    {
-        public string Empresa { get; set; }
-        public decimal Percentual { get; set; }
-    }
-
-    public class KPI
-    {
-        public string Nome { get; set; }
-        public decimal Valor { get; set; }
-        public string Unidade { get; set; }
-    }
-
     public class DatabaseService
     {
         private readonly string _connectionString;
