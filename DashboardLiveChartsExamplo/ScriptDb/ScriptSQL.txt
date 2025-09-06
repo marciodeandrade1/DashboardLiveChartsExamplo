@@ -1,0 +1,55 @@
+﻿-- Criar o banco de dados
+CREATE DATABASE DashboardDB;
+USE DashboardDB;
+
+-- Tabela de Vendas Mensais
+CREATE TABLE VendasMensais (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Mes VARCHAR(20) NOT NULL,
+    Valor DECIMAL(15, 2) NOT NULL,
+    Ano INT 
+);
+
+-- Tabela de Market Share
+CREATE TABLE MarketShare (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Empresa VARCHAR(50) NOT NULL,
+    Percentual DECIMAL(5, 2) NOT NULL
+);
+
+-- Tabela de KPIs (apenas para exemplo, pode ser calculado também)
+CREATE TABLE KPIs (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Nome VARCHAR(50) NOT NULL,
+    Valor DECIMAL(15, 2) NOT NULL,
+    Unidade VARCHAR(20)
+);
+
+-- Inserir dados de exemplo para Vendas
+INSERT INTO VendasMensais (Mes, Valor) VALUES
+('Jan', 42321.00),
+('Fev', 53211.00),
+('Mar', 48975.00),
+('Abr', 65234.00),
+('Mai', 71230.00),
+('Jun', 55321.00),
+('Jul', 82345.00),
+('Ago', 93412.00),
+('Set', 101200.00),
+('Out', 88123.00),
+('Nov', 75321.00),
+('Dez', 112450.00);
+
+-- Inserir dados de exemplo para Market Share
+INSERT INTO MarketShare (Empresa, Percentual) VALUES
+('Empresa A', 40.00),
+('Empresa B', 25.00),
+('Nossa Empresa', 20.00),
+('Empresa C', 15.00);
+
+-- Inserir KPIs de exemplo
+INSERT INTO KPIs (Nome, Valor, Unidade) VALUES
+('Receita Total', 152304.00, 'R$'),
+('Total Vendas', 1284.00, 'un'),
+('Ticket Medio', 118.57, 'R$'),
+('Crescimento', 12.40, '%');
